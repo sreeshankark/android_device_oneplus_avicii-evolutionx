@@ -161,6 +161,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
 
+# FUSE
+persist.sys.fuse.passthrough.enable=true
+
 # Graphics
 debug.sf.disable_backpressure=1
 debug.sf.enable_advanced_sf_phase_offset=1
