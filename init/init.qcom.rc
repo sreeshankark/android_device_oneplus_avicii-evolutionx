@@ -77,6 +77,10 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     write /sys/kernel/icnss/wpss_boot 1
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
+    
+on fs
+    # Charger
+    write /proc/fastchg_fw_update 1
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
