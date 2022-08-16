@@ -82,6 +82,8 @@ on fs
     # Charger
     write /proc/fastchg_fw_update 1
 
+    setprop vendor.boot.project_name ${ro.boot.project_name}
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
