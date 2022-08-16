@@ -66,6 +66,8 @@ on fs
     # Charger
     write /proc/fastchg_fw_update 1
 
+    setprop vendor.boot.project_name ${ro.boot.project_name}
+
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
