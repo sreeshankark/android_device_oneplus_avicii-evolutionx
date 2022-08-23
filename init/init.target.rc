@@ -72,6 +72,7 @@ on post-fs-data
 
 on early-boot
     start vendor.sensors
+    rm /data/system/package_cache
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
