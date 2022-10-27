@@ -52,6 +52,9 @@ on property:sys.boot_completed=1
     copy /vendor/etc/Oppo_QC_LTM_Commercial_2020_01_03.pfm /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/1000-1000-no-exp-958228818.pfm
 
+    # Enable suspend to RAM
+    write /sys/power/mem_sleep "deep"
+
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x22D9
     write /config/usb_gadget/g1/idProduct 0x2769
