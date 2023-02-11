@@ -6,6 +6,7 @@
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_ENFORCE_SYSPROP_OWNER := true
 
 DEVICE_PATH := device/oneplus/avicii
 
@@ -67,7 +68,7 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Display
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 411
 TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_DRM_PP := true
@@ -79,6 +80,9 @@ TARGET_USES_QCOM_DISPLAY_BSP := true
 TARGET_USES_QTI_MAPPER_2_0 := true
 TARGET_USES_QTI_MAPPER_EXTENSIONS_1_1 := true
 
+# APEX
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
@@ -89,7 +93,7 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_odm.xml
@@ -118,7 +122,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=oneplus
-TARGET_KERNEL_SOURCE := kernel/oneplus/sm7250
+TARGET_KERNEL_SOURCE := kernel/oneplus/avicii
 TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
@@ -172,11 +176,6 @@ VENDOR_SECURITY_PATCH := 2023-01-05
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 include hardware/oplus/sepolicy/qti/SEPolicy.mk
 
-# Touch
-SOONG_CONFIG_NAMESPACES += OPLUS_LINEAGE_TOUCH_HAL
-SOONG_CONFIG_OPLUS_LINEAGE_TOUCH_HAL := INCLUDE_DIR
-SOONG_CONFIG_OPLUS_LINEAGE_TOUCH_HAL_INCLUDE_DIR := $(DEVICE_PATH)/touch/include
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
@@ -206,4 +205,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 include vendor/oneplus/avicii/BoardConfigVendor.mk
 
 # Include the OnePlus Firmware
--include vendor/oneplus/firmware/BoardConfigVendor.mk
+include vendor/oneplus/firmware/BoardConfigVendor.mk
