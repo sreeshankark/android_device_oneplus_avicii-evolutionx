@@ -56,9 +56,6 @@
          1: Right side -->
     <integer name="config_alertSliderLocation">1</integer>
 
-    <!-- Whether key handler sends intent when changing slider position -->
-    <string name="config_alertSliderIntent">org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION</string>
-
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
 
