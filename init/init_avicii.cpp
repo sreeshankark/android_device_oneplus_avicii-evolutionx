@@ -46,4 +46,7 @@ void vendor_load_properties() {
         default:
             LOG(ERROR) << "Unexpected RF version: " << rf_version;
     }
+    // RiceDroid Properties
+    OverrideProperty("ro.rice.chipset", "Snapdragon 765G 5G");
+    OverrideProperty("ro.rice.maintainer", "Sreeshankar K");
 }

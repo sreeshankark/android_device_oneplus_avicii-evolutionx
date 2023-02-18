@@ -4,10 +4,11 @@
 //
 
 cc_library_static {
-    name: "libinit_oplus",
+    name: "libinit_avicii",
     recovery_available: true,
+    include_dirs: ["system/core/init"],
     shared_libs: ["libbase"],
-    srcs: ["init_oplus.cpp"],
+    srcs: ["init_avicii.cpp"],
 }
 
 prebuilt_etc {

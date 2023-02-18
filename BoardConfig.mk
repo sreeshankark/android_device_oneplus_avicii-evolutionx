@@ -86,6 +86,9 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # Fingerprint
 TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_avicii
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/device_framework_matrix.xml \
@@ -94,9 +97,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_odm.xml
-
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oplus
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 2
