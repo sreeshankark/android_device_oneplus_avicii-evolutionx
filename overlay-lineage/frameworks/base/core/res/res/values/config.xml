@@ -6,9 +6,6 @@
 -->
 <resources>
 
-    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
-    <string name="config_oemFastChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/fast_charge</string>
-
     <!-- Display has physical cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
 
@@ -22,6 +19,7 @@
 
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
+    <string name="config_WarpChargerStatusPath">"/sys/class/oplus_chg/battery/fast_charge"</string>
 
     <!-- List of comma separated package names for which we the system will not show crash, ANR,
          etc. dialogs. -->
