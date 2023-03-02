@@ -36,5 +36,8 @@
 
     <!-- Force some IME packages to use maximum 101ms haptic duration -->
     <bool name="config_hackHapticDurationForIME">true</bool>
+    
+    <!-- NightLight FOD -->
+    <bool name="disable_fod_night_light">true</bool>
 
 </resources>
