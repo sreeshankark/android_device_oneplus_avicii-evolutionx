@@ -11,12 +11,6 @@
     <!-- Allow devices override audio panel location to the left side -->
     <bool name="config_audioPanelOnLeftSide">true</bool>
 
-    <!-- HBM type of UDFPS overlay.
-            0 - GLOBAL HBM 
-            1 - LOCAL HBM
-    -->
-    <integer name="config_udfpsHbmType">0</integer>
-
     <!-- Max visible notification icons -->
     <integer name="config_maxVisibleNotificationIcons">6</integer>
     <integer name="config_maxVisibleNotificationIconsOnLock">7</integer>
