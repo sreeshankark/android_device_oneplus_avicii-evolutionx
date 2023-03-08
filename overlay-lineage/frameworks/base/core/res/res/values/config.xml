@@ -22,7 +22,7 @@
 
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
-    <string name="config_WarpChargerStatusPath">"/sys/class/oplus_chg/battery/fast_charge"</string>
+    <string name="config_WarpChargerStatusPath">"/sys/class/oplus_chg/battery/voocchg_ing"</string>
 
     <!-- List of comma separated package names for which we the system will not show crash, ANR,
          etc. dialogs. -->
