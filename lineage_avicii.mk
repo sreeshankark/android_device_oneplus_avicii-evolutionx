@@ -17,7 +17,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Additional stuff for this product.
 TARGET_BOOT_ANIMATION_RES := 1080
 RICE_MAINTAINER := Sreeshankar K
-RICE_CHIPSET := Qualcomm Snapdragon 765G 5G
+RICE_CHIPSET := Snapdragon 765G 5G
 RICE_PACKAGE_TYPE := PIXEL
 TARGET_BUILD_APERTURE_CAMERA := true
 SUSHI_BOOTANIMATION := 1080
