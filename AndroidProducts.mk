@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018-2019 The evolutionOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_avicii.mk
+    $(LOCAL_DIR)/evolution_avicii.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_avicii-eng \
-    lineage_avicii-user \
-    lineage_avicii-userdebug
+    evolution_avicii-eng \
+    evolution_avicii-user \
+    evolution_avicii-userdebug

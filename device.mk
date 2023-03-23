@@ -30,9 +30,9 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
-# Alert slider
+# OPlusExtras
 PRODUCT_PACKAGES += \
-    KeyHandler \
+    OPlusExtras \
     tri-state-key-calibrate
 
 # APEX
@@ -169,10 +169,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
-# Doze
-PRODUCT_PACKAGES += \
-    OplusDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
@@ -240,9 +236,11 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom.ramdisk \
     init.class_main.sh \
+    init.evolution.rc \
     init.oplus.hw.rc \
     init.oplus.hw.rc.recovery \
     init.oplus.rc \
+    init.oplus_extra.rc \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
@@ -313,19 +311,26 @@ PRODUCT_PACKAGES += \
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
+    ApertureResTarget \
     CarrierConfigResCommon \
     FrameworksResTarget \
+    EvolutionFrameworksResCommon \
+    EvolutionSettingsProviderResCommon \
+    EvolutionSettingsResCommon \
+    EvolutionSettingsResTarget \
+    EvolutionSystemUIResCommon \
+    EvolutionSystemUIResTarget \
+    FaceUnlockServiceResCommon \
     OPlusFrameworksResCommon \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResCommon \
     OPlusSystemUIResCommon \
     OPlusSystemUIResTarget \
+    OPlusExtrasResCommon \
+    OPlusExtrasResTarget \
     WifiResTarget
 
 # Partitions
