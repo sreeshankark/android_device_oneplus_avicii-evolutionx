@@ -1,0 +1,49 @@
+env:
+    OEM: oneplus
+    CODENAME: avicii
+    CIRRUS_CI: true
+    CIRRUS_SHELL: bash
+    PRODUCT_NAME: evolution_avicii
+    VARIANT: userdebug
+    ROM_NAME: evolutionx
+    USERNAME: Sanju0910
+    USERMAIL: sreeshankar0910@gmail.com
+    TOKEN: ENCRYPTED[!8f85cb8f85dd058e9bd506d3c39df388c3c401e07cc03eb090957e5a6c6f0f0e96b46f71048e78ac75bb6c2d1de59d6f!]
+    DEVICE_REPO: https://github.com/Sanju0910/android_device_oneplus_avicii.git
+    DEVICE_BRANCH: evox13
+    VENDOR_REPO: https://gitlab.com/Sanju0910/android_vendor_oneplus_avicii
+    VENDOR_BRANCH: main
+    KERNEL_REPO: git clone https://${TOKEN}@github.com/Sanju0910/android_kernel_oneplus_avicii.git 
+    KERNEL_BRANCH: main
+    HARDWARE_REPO: https://github.com/Sanju0910/android_hardware_oplus.git
+    HARDWARE_BRANCH: evox13
+    ROM_REPO: https://github.com/Evolution-X/manifest 
+    ROM_BRANCH: tiramisu
+        
+task:
+  name: "Rom Build"
+  timeout_in: 240m
+  trigger_type: manual
+  container:
+      image: ghcr.io/sanju0910/ubuntu:latest
+      cpu: 8
+      memory: 32G
+      
+  #CLONE_SCRIPT_script: |
+   # if [ -z "$CIRRUS_PR" ]; then
+    #  git clone --recursive --branch=$CIRRUS_BRANCH https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
+     # git reset --hard $CIRRUS_CHANGE_IN_REPO
+    #else
+     # git clone --recursive https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
+     # git fetch origin pull/$CIRRUS_PR/head:pull/$CIRRUS_PR
+      #git reset --hard $CIRRUS_CHANGE_IN_REPO
+    #fi    
+
+  SYNC_SCRIPT_script:
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/sync_rom.sh | bash
+      
+  BUILD_SCRIPT_script:
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/build_rom.sh | bash
+      
+  UPLOAD_SCRIPT_script:
+      - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/upload_rom.sh | bash
