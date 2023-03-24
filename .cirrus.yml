@@ -13,7 +13,7 @@ env:
     DEVICE_BRANCH: evox13
     VENDOR_REPO: https://gitlab.com/Sanju0910/android_vendor_oneplus_avicii
     VENDOR_BRANCH: main
-    KERNEL_REPO: git clone https://${TOKEN}@github.com/Sanju0910/android_kernel_oneplus_avicii.git 
+    KERNEL_REPO: https://${TOKEN}@github.com/Sanju0910/android_kernel_oneplus_avicii.git 
     KERNEL_BRANCH: main
     HARDWARE_REPO: https://github.com/Sanju0910/android_hardware_oplus.git
     HARDWARE_BRANCH: evox13
