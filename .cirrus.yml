@@ -29,15 +29,15 @@ task:
       cpu: 8
       memory: 32G
       
-  #CLONE_SCRIPT_script: |
-   # if [ -z "$CIRRUS_PR" ]; then
-    #  git clone --recursive --branch=$CIRRUS_BRANCH https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
-     # git reset --hard $CIRRUS_CHANGE_IN_REPO
-    #else
-     # git clone --recursive https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
-     # git fetch origin pull/$CIRRUS_PR/head:pull/$CIRRUS_PR
-      #git reset --hard $CIRRUS_CHANGE_IN_REPO
-    #fi    
+  CLONE_SCRIPT_script: |
+    if [ -z "$CIRRUS_PR" ]; then
+      git clone --recursive --branch=$CIRRUS_BRANCH https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
+      git reset --hard $CIRRUS_CHANGE_IN_REPO
+    else
+      git clone --recursive https://x-access-token:${CIRRUS_REPO_CLONE_TOKEN}@github.com/${CIRRUS_REPO_FULL_NAME}.git $CIRRUS_WORKING_DIR
+      git fetch origin pull/$CIRRUS_PR/head:pull/$CIRRUS_PR
+      git reset --hard $CIRRUS_CHANGE_IN_REPO
+    fi    
 
   SYNC_SCRIPT_script:
       - curl -sL https://raw.githubusercontent.com/Sanju0910/Cirrus_CI/main/scripts/sync_rom.sh | bash
