@@ -1,5 +1,5 @@
 
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2023 Evolution X Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -90,10 +90,9 @@ TARGET_SURFACEFLINGER_UDFPS_LIB := //hardware/oplus:libudfps_extension.oplus
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/evolution/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_odm.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_avicii
@@ -120,7 +119,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=oneplus
 TARGET_KERNEL_SOURCE := kernel/oneplus/avicii
-TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig
+TARGET_KERNEL_CONFIG := avicii_defconfig
 TARGET_KERNEL_CLANG_VERSION := r487747
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 
@@ -136,13 +135,11 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 100663296
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 236009631744
-BOARD_EROFS_COMPRESSOR := lz4
-BOARD_EROFS_PCLUSTER_SIZE := 65536
-BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := erofs
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := erofs
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor
 BOARD_ONEPLUS_DYNAMIC_PARTITIONS_SIZE := 7511998464
 BOARD_SUPER_PARTITION_GROUPS := oneplus_dynamic_partitions
@@ -169,7 +166,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security
-VENDOR_SECURITY_PATCH := 2023-01-05
+VENDOR_SECURITY_PATCH := 2023-03-05
 
 # SEPolicy
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
@@ -205,5 +202,5 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-# Include the OnePlus Firmware
-include vendor/oneplus/avicii/firmware.mk
+# Include the proprietary files BoardConfig.
+include vendor/oneplus/avicii/BoardConfigVendor.mk

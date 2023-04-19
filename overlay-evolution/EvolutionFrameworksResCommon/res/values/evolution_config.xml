@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2015-2016 The CyanogenMod Project
+                   2017-2021 The LineageOS Project
+                   2019-2022 The Evolution X Project
+                   SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Default value for proximity check on screen wake
+     NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+
+   <!-- Paths to the libraries that contain device specific key handlers -->
+    <string-array name="config_deviceKeyHandlerLibs" translatable="false">
+        <item>/system_ext/priv-app/OPlusExtras/OPlusExtras.apk</item>
+        <item>/system_ext/priv-app/OPlusExtras/OPlusExtras.apk</item>
+    </string-array>
+
+    <!-- Names of the key handler classes -->
+    <string-array name="config_deviceKeyHandlerClasses" translatable="false">
+        <item>org.evolution.oplus.OPlusExtras.slider.KeyHandler</item>
+        <item>org.evolution.oplus.OPlusExtras.touch.KeyHandler</item>
+    </string-array>
+
+    <!-- Whether device has physical tri state switch -->
+    <bool name="config_hasAlertSlider">true</bool>
+
+    <!-- Whether key handler sends intent when changing slider position -->
+    <string name="config_alertSliderIntent">org.evolution.oplus.OPlusExtras.slider.UPDATE_SLIDER_POSITION</string>
+
+    <!-- The location of the devices physical tri state switch
+         0: Left side
+         1: Right side -->
+    <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Hardware keys present on the device, stored as a bit field.
+         This integer should equal the sum of the corresponding value for each
+         of the following keys present:
+             1 - Home
+             2 - Back
+             4 - Menu
+             8 - Assistant (search)
+            16 - App switch
+            32 - Camera
+            64 - Volume rocker
+         For example, a device with Home, Back and Menu keys would set this
+         config to 7. -->
+    <integer name="config_deviceHardwareKeys">64</integer>
+
+    <!-- The list of package IDs that are not allowed to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
+        <item>org.telegram.messenger</item>
+        <item>org.thunderdog.challegram</item>
+        <item>us.zoom.videomeetings</item>
+    </string-array>
+
+    <!-- Does the device have a notification led -->
+    <bool name="config_hasNotificationLed">false</bool>
+
+    <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">true</bool>
+
+    <!-- Whether device has warp charging support -->
+    <bool name="config_hasWarpCharger">true</bool>
+    <!-- Path to warp charging status file -->
+    <string name="config_WarpChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/voocchg_ing"</string>
+
+    <!-- Smart charging -->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/devices/virtual/oplus_chg/battery/mmi_charging_enable</string>
+    <string name="config_SmartChargingSuspendValue" translatable="false">0</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">1</string>
+
+</resources>
