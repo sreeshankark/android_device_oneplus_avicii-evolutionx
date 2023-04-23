@@ -323,6 +323,7 @@ PRODUCT_PACKAGES += \
     ApertureResTarget \
     CarrierConfigResCommon \
     EvolutionFrameworksResCommon \
+    EvolutionSettingsLibResTarget \
     EvolutionSettingsProviderResCommon \
     EvolutionSettingsResCommon \
     EvolutionSystemUIResCommon \
