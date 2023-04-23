@@ -77,5 +77,8 @@
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/devices/virtual/oplus_chg/battery/mmi_charging_enable</string>
     <string name="config_SmartChargingSuspendValue" translatable="false">0</string>
     <string name="config_SmartChargingResumeValue" translatable="false">1</string>
+    
+     <!-- Boost Framework -->
+    <bool name="config_supportsBoostFramework">true</bool>
 
 </resources>
