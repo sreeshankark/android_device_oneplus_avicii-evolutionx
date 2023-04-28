@@ -3928,7 +3928,7 @@ case "$target" in
              echo 1075200 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
              echo 1152000 > /sys/devices/system/cpu/cpufreq/policy6/schedutil/hispeed_freq
              echo 1401600 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
-             echo 614400 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+             echo 300000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
              echo 652800 > /sys/devices/system/cpu/cpufreq/policy6/scaling_min_freq
              echo 806400 > /sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq
              echo 83 > /proc/sys/kernel/sched_asym_cap_sibling_freq_match_pct
