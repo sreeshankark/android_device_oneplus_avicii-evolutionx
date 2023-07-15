@@ -13,8 +13,8 @@
     <bool name="config_audioPanelOnLeftSide">true</bool>
 
     <!-- Max visible notification icons -->
-    <integer name="config_maxVisibleNotificationIcons">4</integer>
-    <integer name="config_maxVisibleNotificationIconsOnLock">5</integer>
+    <integer name="config_maxVisibleNotificationIcons">3</integer>
+    <integer name="config_maxVisibleNotificationIconsOnLock">4</integer>
     
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
