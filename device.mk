@@ -62,7 +62,6 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_ODM)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
@@ -165,9 +164,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-
-# Dolby Atmos
-$(call inherit-product, vendor/dolby/atmos/config.mk)
 
 # Doze
 PRODUCT_PACKAGES += \
