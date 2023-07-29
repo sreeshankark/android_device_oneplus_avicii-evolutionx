@@ -372,15 +372,15 @@
     <ctl name="TX SMIC MUX7" value="ZERO" />
 
     <!-- Volume controls -->
-    <ctl name="WSA_RX0 Digital Volume" value="84" />
-    <ctl name="WSA_RX1 Digital Volume" value="84" />
+    <ctl name="WSA_RX0 Digital Volume" value="88" />
+    <ctl name="WSA_RX1 Digital Volume" value="88" />
     <!-- Decrease Headphone and Earpiece volume -->
-    <ctl name="RX_RX0 Digital Volume" value="79" />
-    <ctl name="RX_RX1 Digital Volume" value="79" />
+    <ctl name="RX_RX0 Digital Volume" value="86" />
+    <ctl name="RX_RX1 Digital Volume" value="86" />
     <ctl name="RX_RX2 Digital Volume" value="84" />
     <ctl name="HPHL Volume" value="22" />
     <ctl name="HPHR Volume" value="22" />
-    <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+    <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
     <ctl name="TX_DEC0 Volume" value="84" />
     <ctl name="TX_DEC1 Volume" value="84" />
@@ -648,23 +648,23 @@
 	<!-- STABLE -->
     <path name="deep-buffer-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia1" value="1" />
-	<ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
-	<!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
-        <ctl name="RX_RX0 Digital Volume" value="90" />
+	    <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
+	    <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
         <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
         <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
         <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
-	<ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
-	<!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+	    <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+	    <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
         <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
-        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_DEFAULT Stock -->
-        <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
         <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
         <ctl name="EAR PA Gain" value="G_3_DB" />
         <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
         <ctl name="EAR_RDAC Switch" value="1" />
         <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
-	<ctl name="RX_EAR Mode" value="ON" />
+	    <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="deep-buffer-playback dummy">
@@ -791,6 +791,23 @@
 
     <path name="low-latency-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia5" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia5" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="low-latency-playback speaker-protected">
@@ -917,6 +934,23 @@
 
     <path name="audio-ull-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia8" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia8" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="audio-ull-playback speaker-protected">
@@ -1045,6 +1079,23 @@
 
     <path name="compress-offload-playback speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia4" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia4" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback dummy">
@@ -1187,6 +1238,23 @@
 
     <path name="compress-offload-playback2 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia7" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia7" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback2 dummy">
@@ -1314,6 +1382,23 @@
 
     <path name="compress-offload-playback3 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia10" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia10" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback3 dummy">
@@ -1440,6 +1525,23 @@
 
     <path name="compress-offload-playback4 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia11" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia11" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback4 dummy">
@@ -1566,6 +1668,23 @@
 
     <path name="compress-offload-playback5 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia12" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia12" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback5 dummy">
@@ -1692,6 +1811,23 @@
 
     <path name="compress-offload-playback6 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia13" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia13" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback6 dummy">
@@ -1818,6 +1954,23 @@
 
     <path name="compress-offload-playback7 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia14" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia14" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback7 dummy">
@@ -1944,6 +2097,23 @@
 
     <path name="compress-offload-playback8 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia15" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia15" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback8 dummy">
@@ -2070,6 +2240,23 @@
 
     <path name="compress-offload-playback9 speaker">
         <ctl name="PRI_MI2S_RX Audio Mixer MultiMedia16" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia16" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece volume increased by x from Stock -->
+        <ctl name="RX_RX0 Digital Volume" value="88" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece forward MIXER RX_MACRO -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece MUX SWITCH -->
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <!-- suryanshtv@github.com, 2023/07/11, Source to earpiece relay -->
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece SPKR GAIN set to G_3_DB STOCK -->
+        <ctl name="EAR SPKR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece PA GAIN set to G_3_DB -->
+        <ctl name="EAR PA Gain" value="G_3_DB" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RDAC SWITCH -->
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <!-- suryanshtv@github.com, 2023/07/11, Earpiece RX RELAY ON -->
+        <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="compress-offload-playback9 dummy">
