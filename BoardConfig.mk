@@ -125,7 +125,7 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := BRAND_SHOW_FLAG=oneplus
 TARGET_KERNEL_SOURCE := kernel/oneplus/avicii
 TARGET_KERNEL_CONFIG := avicii_defconfig
 TARGET_KERNEL_CLANG_VERSION := r487747c
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/kernel/oneplus/avicii/clang
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/kernel/oneplus/avicii/clang-llvm
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
