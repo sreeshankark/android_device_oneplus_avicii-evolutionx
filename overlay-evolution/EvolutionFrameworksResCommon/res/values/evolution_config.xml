@@ -73,7 +73,10 @@
     <!-- Path to warp charging status file -->
     <string name="config_WarpChargerStatusPath" translatable="false">/sys/class/oplus_chg/battery/voocchg_ing"</string>
 
-    <!-- Smart charging -->
+     <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+    <integer name="config_smartChargingBatteryLevel">80</integer>
+    <integer name="config_smartChargingBatteryResumeLevel">60</integer>
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/devices/virtual/oplus_chg/battery/mmi_charging_enable</string>
     <string name="config_SmartChargingSuspendValue" translatable="false">0</string>
     <string name="config_SmartChargingResumeValue" translatable="false">1</string>
