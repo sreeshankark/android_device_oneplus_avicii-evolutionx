@@ -42,6 +42,11 @@ on boot
 
     # TOF
     chown cameraserver cameraserver /dev/stmvl53l1_ranging
+    
+    # Smart charging input suspend node
+    chown system system /sys/devices/virtual/oplus_chg/battery/mmi_charging_enable
+    chmod 0666 /sys/devices/virtual/oplus_chg/battery/mmi_charging_enable
+
 
 on property:ro.boot.prjname=*
     # Display
