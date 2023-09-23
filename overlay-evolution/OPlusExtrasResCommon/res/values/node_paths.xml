@@ -35,6 +35,11 @@
     <string name="node_touchboost_mode_switch">/sys/module/msm_performance/parameters/touchboost</string>
     <string name="node_touchboost_mode_switch_true">1</string>
     <string name="node_touchboost_mode_switch_false">0</string>
+    
+    <!-- USB 2.0 Force fastcharge sysfs node path -->
+    <string name="node_usb2_fast_charge_mode_switch" translatable="false">/sys/kernel/fast_charge/force_fast_charge</string>
+    <string name="node_usb2_fast_charge_mode_switch_true">1</string>
+    <string name="node_usb2_fast_charge_mode_switch_false">0</string>
 
     <!-- FSync sysfs node path, true, false -->
     <string name="node_fsync_mode_switch">/sys/module/sync/parameters/fsync_enabled</string>
