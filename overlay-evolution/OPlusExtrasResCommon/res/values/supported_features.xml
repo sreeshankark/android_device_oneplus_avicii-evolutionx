@@ -31,6 +31,9 @@
 
     <!-- Whether device supports AdrenoBoost -->
     <bool name="config_deviceSupportsAdrenoBoost">true</bool>
+    
+    <!-- Whether device supports NR Mode Switch -->
+    <bool name="config_deviceSupportsNrModeSwitch">true</bool>
 
     <!-- Whether device supports Touch Screen Gestures -->
     <bool name="config_deviceSupportsTouchScreenGestures">true</bool>
