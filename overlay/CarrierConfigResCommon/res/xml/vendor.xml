@@ -4304,7 +4304,7 @@
         <boolean name="config_disable_clir_over_ut" value="true" />
         <boolean name="config_oplus_4g_pref_default" value="false" />
         <int name="config_oplus_5g_pref_default" value="1" />
-        <boolean name="carrier_config_vonr_state" value="false" />
+        <boolean name="carrier_config_vonr_state" value="true" />
         <boolean name="carrier_config_vonr_visible" value="true" />
         <int name="carrier_oplus_auto_nr_mode" value="3" />
         <int-array name="carrier_nr_availabilities_int_array" num="2">
