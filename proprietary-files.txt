@@ -509,6 +509,12 @@ vendor/etc/perf/targetresourceconfigs.xml
 vendor/lib/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 
+# Radio
+odm/lib64/vendor.oplus.hardware.appradio@1.0.so
+odm/lib64/vendor.oplus.hardware.ims@1.0.so
+odm/lib64/vendor.oplus.hardware.radio@1.0.so
+odm/lib64/vendor.oplus.hardware.subsys_radio@1.0.so
+
 # Sensors
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
 odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc
